@@ -255,6 +255,22 @@ function ExampleController($scope, $timeout, $log, $http) {
                     geodesic: true,
                     visible: true
                 }
+            ],
+            circles: [
+                {
+                    center: {
+                                latitude: 70,
+                                longitude: 50
+                            },
+                    radius: 10000,
+                },
+                {
+                    center: {
+                                latitude: 30,
+                                longitude: -90,
+                            },
+                    radius: 490000,
+                },
             ]
         },
         toggleColor: function (color) {
