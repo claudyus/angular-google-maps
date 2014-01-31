@@ -5590,8 +5590,6 @@ angular.module("google-maps").directive("circle", [
         clickable: "=",
         draggable: "=",
         editable: "=",
-        geodesic: "=",
-        icons: "=icons",
         visible: "=",
         strokeColor: "=",
         strokeOpacity: "=",
@@ -5615,7 +5613,7 @@ angular.module("google-maps").directive("circle", [
             fillColor: scope.fillColor || '#F00',
             fillOpacity: scope.fillOpacity || 0.35,
             map: map };
-          circle = new google.maps.Circle(opts);
+          var circle = new google.maps.Circle(opts);
           if (angular.isDefined(scope.editable)) {
             scope.$watch("editable", function(newValue, oldValue) {
               return circle.setEditable(newValue);
